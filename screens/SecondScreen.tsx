@@ -1,6 +1,7 @@
 import { View, Text, TextInput, Button } from 'react-native'
 import { useState, useContext } from 'react'
 import { AppContext } from '../context/AppContext';
+import { styles } from './style';
 
 
 
@@ -11,10 +12,10 @@ const SecondScreen = () => {
 
     return (
         <View>
-            <Text style={{ color: 'black', fontSize: 25 }}>Ingrese texto a guardar</Text>
-            <TextInput style={{ color: 'black', fontSize: 25, backgroundColor: 'white' }} onChangeText={changeText} />
+            <Text style={styles.subTitle}>Ingrese texto a guardar</Text>
+            <TextInput style={styles.textInput} onChangeText={changeText} />
             <Button title='Guardar texto ' onPress={() => { dispatch({payload:text,type:'CHANGE_TEXT'}) }} />
-            <Text style={{ color: 'black', fontSize: 46 }} >{text}</Text>
+            <Text style={styles.textOutput}>{text}</Text>
         </View>
     )
 }

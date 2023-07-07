@@ -13,8 +13,8 @@ const Navigation = () => {
         <NavigationContainer>
             <Stack.Navigator>
                 <Stack.Screen name="Home" component={HomeScreen} />
-                <Stack.Screen name="Segunda" component={SecondScreen} />
-                <Stack.Screen name="Tercera" component={AnotherScrenn} />
+                <Stack.Screen name="GuardarTexto" component={SecondScreen} />
+                <Stack.Screen name="MostrarTexto" component={AnotherScrenn} />
             </Stack.Navigator>
         </NavigationContainer>
     )

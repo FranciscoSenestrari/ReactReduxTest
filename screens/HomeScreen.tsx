@@ -1,13 +1,12 @@
 import { View, Text, Button } from 'react-native'
 import React from 'react'
-import Navigation from '../navigation/Navigation'
-
+import {styles} from './style'
 const HomeScreen = ({navigation}) => {
   return (
     <View>
-      <Text>HomeScreen</Text>
-      <Button title='segunda' onPress={()=>navigation.navigate("Segunda")}/>
-      <Button title='Tercera' onPress={()=>navigation.navigate("Tercera")}/>
+      <Text style={styles.title}>React Redux </Text>
+      <Button title='Guardar Texto' onPress={()=>navigation.navigate("GuardarTexto")}/>
+      <Button title='Mostrar Texto' onPress={()=>navigation.navigate("MostrarTexto")}/>
 
     </View>
   )

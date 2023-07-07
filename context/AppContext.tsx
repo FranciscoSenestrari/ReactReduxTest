@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useReducer, createContext} from 'react'
 
 type State={
     textInput :string
@@ -14,7 +14,7 @@ const initialState = {
 
 }
 
-const AppContext = React.createContext<{
+const AppContext = createContext<{
     state: State
     dispatch: React.Dispatch<Action>
 }>({ state: initialState, dispatch: () => null })
@@ -30,7 +30,7 @@ const reducer = (state: State, action: Action) => {
     }
 }
 const AppContextProvider: React.FC = ({ children }) => {
-    const [state, dispatch] = React.useReducer(reducer, initialState)
+    const [state, dispatch] = useReducer(reducer, initialState)
 
     return (
         <AppContext.Provider value={{ state, dispatch }}>
