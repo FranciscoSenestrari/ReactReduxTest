@@ -1,5 +1,6 @@
-#React Redux Example
-##This a expample to implement react redux (deprecate version)
+# React Redux Example
+
+## This a expample to implement react redux (deprecate version)
 # Getting Started
 
 ```bash
